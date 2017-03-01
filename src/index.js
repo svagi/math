@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Redirect, browserHistory } from 'react-router'
+import { Router, Route, Redirect, hashHistory } from 'react-router'
 
 import App from './App'
 import PrimeNumbers from './pages/PrimeNumbers'
@@ -10,7 +10,7 @@ import Lcm from './pages/Lcm'
 import Congruence from './pages/Congruence'
 
 const app = (
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path='/' component={App}>
       <Route path='prime-generator' component={PrimeNumbers} />
       <Route path='prime-factors' component={PrimeFactors} />
