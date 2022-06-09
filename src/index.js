@@ -1,6 +1,6 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import App from './App'
 import PrimeNumbers from './pages/PrimeNumbers'
@@ -12,16 +12,16 @@ import Congruence from './pages/Congruence'
 const app = (
   <BrowserRouter basename="/math">
     <App>
-      <Switch>
-        <Route path="/prime-generator" component={PrimeNumbers} />
-        <Route path="/prime-factors" component={PrimeFactors} />
-        <Route path="/extended-euclidean" component={Euclidean} />
-        <Route path="/lcm" component={Lcm} />
-        <Route path="/congruence" component={Congruence} />
-      </Switch>
+      <Routes>
+        <Route path="/prime-generator" element={<PrimeNumbers />} />
+        <Route path="/prime-factors" element={<PrimeFactors />} />
+        <Route path="/extended-euclidean" element={<Euclidean />} />
+        <Route path="/lcm" element={<Lcm />} />
+        <Route path="/congruence" element={<Congruence />} />
+      </Routes>
     </App>
   </BrowserRouter>
 )
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'))
 root.render(app)
