@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import App from './App'
@@ -23,4 +23,5 @@ const app = (
   </BrowserRouter>
 )
 
-render(app, document.getElementById('root'))
+const root = createRoot(document.getElementById('root'));
+root.render(app)
