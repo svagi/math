@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "http://svagi.github.io/math",
   "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
     "react-router-dom": "6.4.3"
   },
   "devDependencies": {
